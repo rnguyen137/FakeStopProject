@@ -23,6 +23,11 @@ app.post('/getGame', async (req, res) => {
     res.send(result.recordset);
 });
 
+app.get('/getAllGames', async (req, res) => {
+    const result = await dbOperations.getAllGames();
+    res.send(result.recordset);
+});
+
 //==================================================================================================================
 // dbOperations.getAllGames().then(res => {
 //     console.log(res.recordset);
